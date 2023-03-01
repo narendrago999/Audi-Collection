@@ -65,7 +65,7 @@ form .image_login img{
     height: 748px;
 }
 
-@media screen and (min-width:400px) {
+@media screen and (max-width:700px) {
     form{
         display: block;
        
