@@ -1,0 +1,83 @@
+form{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 80vh;
+   background-color: whitesmoke;
+    margin: 30px auto;
+    border-radius: 30px;
+}
+form .inputs{
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+
+    width: 40%;
+}
+form .inputs a{
+    margin-left: 350px;
+}
+form .inputs h1{
+    margin: 90px auto;
+    
+}
+form .inputs .boxx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+form .inputs .boxx input{
+   padding: 6px;
+   font-size: 16px;
+   border: none;
+   background: none;
+   border-bottom: 1px solid red;
+   width: 290px;
+   outline: none;
+}
+form .inputs input[type="submit"]{
+    width: max-content;
+    margin: auto;
+    margin-top: 30px;
+    background: linear-gradient(180deg, white,rgba(255, 0, 0, 0.605) , rgba(255, 0, 0, 0.699));
+    color: white;
+    border-radius: 30px;
+   border: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+form .image_login{
+   margin: 0;
+
+   margin-left: -110px;
+   overflow: hidden;
+ 
+
+}
+form .image_login img{
+   margin: 0;
+
+    width: 651px;
+    height: 748px;
+}
+
+@media screen and (min-width:400px) {
+    form{
+        display: block;
+       
+    }
+    form .image_login{
+        display: none;
+    
+    }
+    form .image_login img{
+     
+        display: none;
+        width: 651px;
+        height: 748px;
+    }
+}

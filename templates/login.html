@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/logo/audi-logo-2016-show.png">
+    <link rel="stylesheet" href="/static/mainstyle.css">
+    <link rel="stylesheet" href="/static/login.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+            <img src="/static/logo/audi-logo-2016-show.png" alt="loading...">
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="contact"><li>Contact Us</li></a>
+                <a href="login"><li class="active">Login</li></a>
+                <a href="register"><li>Register</li></a>
+                
+            </ul>
+        </nav>
+    </div>
+        <form action="/login" method="post">
+            {% csrf_token %}
+            <div class="image_login">
+                <img src="/static/images/indexfirst.jpg" alt="loading...">
+            </div>
+            <div class="inputs">
+                <h1>LogIn</h1>
+                <div class="boxx">
+                    <label for="">Email </label>
+                    <input type="email" placeholder="email" required name="email">
+                    
+                </div>
+                <div class="boxx">
+        
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="password" required name="password">
+                </div>
+                {% for message in messages %}
+                <div class="message">
+                  {{message}}
+                </div>
+                {% endfor %}
+                <input type="submit" value="SignIn">
+            </div>
+          </form>
+          <footer>
+            <h1>Audi<span>Car</span>Point</h1>
+            <div class="quick">
+                <h2>Quick Links</h2>
+                <ul>
+                    <a href="/"><li>Home</li></a>
+                    <a href="contact"><li>contact</li></a>
+                    <a href="login"><li>login</li></a>
+                    <a href="register"><li>register</li></a>
+                </ul>
+            </div>
+            <div class="terms">
+                <h2>legal</h2>
+        
+                <ul>
+                    <a href=""><li>Privacy</li></a>
+                    <a href=""><li>Refund Policy</li></a>
+                    <a href=""><li>terms & conditions</li></a>
+                </ul>
+            </div>
+            <div class="connect">
+                <h2>Location</h2>
+        
+                <ul>
+                    <li>India</li>
+                    <li>+91 9352641216</li>
+                    <li>Rajasthan</li>
+                </ul>
+            </div>
+        </footer>
+</body>
+</html>

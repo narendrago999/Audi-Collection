@@ -1,0 +1,44 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+   background: url(./images/Audi\ RS5.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+    padding: 60px 0 ;
+}
+
+form h1{
+    background-color: rgba(255, 0, 0, 0.774);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-bottom: 30px;
+    outline: none;
+}
+form input{
+    width: 450px;
+    font-size: 18px;
+    margin: 20px;
+    outline: none;
+    padding: 10px 0;
+    border-radius: 30px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.707);
+    border: none;
+    border-bottom: 1px solid red;
+    color: white;
+}
+form input[type="submit"]{
+    width: max-content;
+    margin: auto;
+    margin-top: 30px;
+    background: linear-gradient(180deg, white,rgba(255, 0, 0, 0.605) , rgba(255, 0, 0, 0.699));
+    color: white;
+    border-radius: 30px;
+    border: 1px solid orange;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+}

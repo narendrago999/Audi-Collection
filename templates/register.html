@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/logo/audi-logo-2016-show.png">
+    <link rel="stylesheet" href="/static/register.css">
+    <link rel="stylesheet" href="/static/mainstyle.css">
+    <title>register</title>
+    
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+            <img src="/static/logo/audi-logo-2016-show.png" alt="loading...">
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="contact"><li>Contact Us</li></a>
+                <a href="login"><li>Login</li></a>
+                <a href="register"><li class="active">Register</li></a>
+                
+            </ul>
+        </nav>
+    </div>
+    <form action="/register" method="post">
+        <h1>Register With Us.</h1>
+        {% csrf_token %}
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="email" required>
+        <input type="number" name="number" placeholder="number" required>
+        <input type="text" name="state" placeholder="State" required>
+        <input type="text" name="city" placeholder="City" required>
+        <input type="password" name="password" placeholder="passsword" required>
+        <input type="password" name="cpassword" placeholder="Confirm Passsword" required>
+        {% for message in messages %}
+        <div class="message">
+          {{message}}
+        </div>
+        {% endfor %}
+        <input type="submit" value="Click here to Register">
+    </form>
+    <footer>
+        <h1>Audi<span>Car</span>Point</h1>
+        <div class="quick">
+            <h2>Quick Links</h2>
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="contact"><li>contact</li></a>
+                <a href="login"><li>login</li></a>
+                <a href="register"><li>register</li></a>
+            </ul>
+        </div>
+        <div class="terms">
+            <h2>legal</h2>
+    
+            <ul>
+                <a href=""><li>Privacy</li></a>
+                <a href=""><li>Refund Policy</li></a>
+                <a href=""><li>terms & conditions</li></a>
+            </ul>
+        </div>
+        <div class="connect">
+            <h2>Location</h2>
+    
+            <ul>
+                <li>India</li>
+                <li>+91 9352641216</li>
+                <li>Rajasthan</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

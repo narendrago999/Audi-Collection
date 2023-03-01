@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/logo/audi-logo-2016-show.png">
+    <link rel="stylesheet" href="/static/mainstyle.css">
+    <link rel="stylesheet" href="/static/login.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+            <img src="/static/logo/audi-logo-2016-show.png" alt="loading...">
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="contact"><li>Contact Us</li></a>
+
+                <a href="discover"><li class="active">discover</li></a>
+                <a href="/"><li>LogOut</li></a>
+                
+                
+            </ul>
+        </nav>
+    </div>
+    <div class="allCars">
+        <h1>We have all types of Audi Cars</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, voluptatum.</p>
+    <div class="main">
+        {% for i in product %}
+        <div class="card">
+            <img src="/static/{{i.product_image}}" alt="">
+            <p>{{i.product_title}}</p>
+            <p>Rs.{{i.product_price}}L</p>
+            <p>{{i.product_desc}}</p>
+        
+        </div>
+        {% endfor %}
+    </div>
+</div>
+          <footer>
+            <h1>Audi<span>Car</span>Point</h1>
+            <div class="quick">
+                <h2>Quick Links</h2>
+                <ul>
+                    <a href="/"><li>Home</li></a>
+                    <a href="contact"><li>contact</li></a>
+                    <a href="login"><li>login</li></a>
+                    <a href="register"><li>register</li></a>
+                </ul>
+            </div>
+            <div class="terms">
+                <h2>legal</h2>
+        
+                <ul>
+                    <a href=""><li>Privacy</li></a>
+                    <a href=""><li>Refund Policy</li></a>
+                    <a href=""><li>terms & conditions</li></a>
+                </ul>
+            </div>
+            <div class="connect">
+                <h2>Location</h2>
+        
+                <ul>
+                    <li>India</li>
+                    <li>+91 9352641216</li>
+                    <li>Rajasthan</li>
+                </ul>
+            </div>
+        </footer>
+</body>
+</html>
